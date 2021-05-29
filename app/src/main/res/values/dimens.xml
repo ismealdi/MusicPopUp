@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="am_divider">0.8dp</dimen>
+    <dimen name="am_divider_bold">1dp</dimen>
+    <dimen name="am_divider_outline">1.6dp</dimen>
+    <dimen name="am_radius">12dp</dimen>
+    <dimen name="am_radius_input">16dp</dimen>
+    <dimen name="am_radius_small">4dp</dimen>
+
+    <dimen name="am_activity_horizontal_margin">18dp</dimen>
+    <dimen name="am_activity_horizontal_margin_tiny">4.5dp</dimen>
+    <dimen name="am_activity_horizontal_margin_small">9dp</dimen>
+    <dimen name="am_activity_vertical_margin_small">8dp</dimen>
+    <dimen name="am_activity_vertical_margin_medium">32dp</dimen>
+    <dimen name="am_activity_vertical_margin">16dp</dimen>
+
+    <dimen name="am_text_nano">6sp</dimen>
+    <dimen name="am_text_extra_tiny">8sp</dimen>
+    <dimen name="am_text_tiny">10sp</dimen>
+    <dimen name="am_text_small">12sp</dimen>
+    <dimen name="am_text_normal">14sp</dimen>
+    <dimen name="am_text_medium">16sp</dimen>
+    <dimen name="am_text_big">18sp</dimen>
+
+    <dimen name="am_toolbar_start">80dp</dimen>
+    <dimen name="am_toolbar_accent">59.5dp</dimen>
+    <dimen name="am_toolbar_top">20dp</dimen>
+
+    <dimen name="am_component_extra_tiny">2dp</dimen>
+    <dimen name="am_component_tiny">4dp</dimen>
+    <dimen name="am_component_small">6dp</dimen>
+    <dimen name="am_component_normal">8dp</dimen>
+    <dimen name="am_component_medium">10dp</dimen>
+    <dimen name="am_component_big">12dp</dimen>
+    <dimen name="am_component_extra_big">20dp</dimen>
+    <dimen name="am_component_extra">24dp</dimen>
+
+    <dimen name="am_input_height_normal">44dp</dimen>
+</resources>

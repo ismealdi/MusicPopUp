@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/componentToolbar"
+        layout="@layout/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inputSearch"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/am_input_height_normal"
+        app:layout_constraintTop_toBottomOf="@id/componentToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/whiteTotal"
+        android:drawablePadding="@dimen/am_component_medium"
+        android:paddingStart="@dimen/am_activity_horizontal_margin"
+        android:paddingEnd="@dimen/am_activity_horizontal_margin"
+        android:hint="@string/text_search_artist"
+        android:inputType="text"
+        android:drawableTint="@color/colorAmDividerBlack"
+        android:drawableEnd="@drawable/ic_search"
+        android:textColor="@color/black"
+        android:textSize="@dimen/am_text_small"
+        app:fontFamily="@font/gs_medium"
+        android:imeOptions="actionDone"
+        tools:targetApi="m" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/am_divider"
+        app:layout_constraintTop_toBottomOf="@id/inputSearch"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/lists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:splitMotionEvents="false" />
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/componentLoader"
+                layout="@layout/component_loader"
+                android:layout_marginStart="@dimen/am_activity_horizontal_margin"
+                android:layout_marginTop="@dimen/am_activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/componentError"
+                layout="@layout/component_error"
+                android:layout_marginEnd="@dimen/am_activity_horizontal_margin"
+                android:layout_marginStart="@dimen/am_activity_horizontal_margin"
+                android:layout_marginTop="@dimen/am_activity_vertical_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/am_activity_vertical_margin"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:paddingStart="68dp"
+        android:paddingEnd="@dimen/am_activity_horizontal_margin"
+        android:background="@drawable/round_white"
+        app:backgroundTint="@color/whiteTotal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginStart="@dimen/am_activity_vertical_margin"
+            android:layout_marginTop="@dimen/am_component_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/songTitleItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/gs_bold"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            tools:text="Silence in Diam"
+            android:textSize="@dimen/am_text_small"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginStart="@dimen/am_activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/songTitleItem"
+            android:id="@+id/songArtistItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/gs_regular"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            tools:text="Kuncoro Qusloiq"
+            android:textSize="@dimen/am_text_tiny"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/seekBar"
+            app:layout_constraintBottom_toBottomOf="@id/seekBar"
+            android:layout_marginEnd="@dimen/am_activity_horizontal_margin_small"
+            android:id="@+id/songTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/gs_bold"
+            android:maxLines="1"
+            android:lines="1"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/am_text_tiny"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            app:layout_constraintEnd_toStartOf="@id/songTime"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:visibility="gone"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/am_activity_horizontal_margin"
+        android:id="@+id/imageArtWorkItem"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/button_white"/>
+
+    <include
+        android:visibility="gone"
+        layout="@layout/component_loader"
+        app:layout_constraintStart_toStartOf="@id/imageArtWorkItem"
+        app:layout_constraintBottom_toBottomOf="@id/imageArtWorkItem"
+        app:layout_constraintEnd_toEndOf="@id/imageArtWorkItem"
+        app:layout_constraintTop_toTopOf="@id/imageArtWorkItem"
+        android:id="@+id/songLoader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/shape_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:visibility="gone"
+        android:id="@+id/buttonPlay"
+        android:layout_width="@dimen/am_input_height_normal"
+        android:layout_height="@dimen/am_input_height_normal"
+        app:layout_constraintTop_toTopOf="@id/imageArtWorkItem"
+        app:layout_constraintBottom_toBottomOf="@id/imageArtWorkItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_play"
+        android:layout_marginEnd="@dimen/am_activity_horizontal_margin"
+        android:background="@drawable/button_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:visibility="gone"
+        android:id="@+id/buttonPause"
+        android:layout_width="@dimen/am_input_height_normal"
+        android:layout_height="@dimen/am_input_height_normal"
+        app:layout_constraintTop_toTopOf="@id/imageArtWorkItem"
+        app:layout_constraintBottom_toBottomOf="@id/imageArtWorkItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_pause"
+        android:layout_marginEnd="@dimen/am_activity_horizontal_margin"
+        android:background="@drawable/button_white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

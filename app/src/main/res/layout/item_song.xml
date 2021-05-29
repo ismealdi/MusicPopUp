@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemParent"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whiteTotal"
+    android:layout_marginBottom="@dimen/am_divider"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingEnd="@dimen/am_activity_horizontal_margin"
+    android:paddingStart="@dimen/am_activity_horizontal_margin">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageArtWork"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/am_activity_vertical_margin_small"
+        android:layout_marginTop="@dimen/am_activity_vertical_margin_small" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginStart="@dimen/am_component_medium"
+        android:layout_marginTop="@dimen/am_component_medium"
+        app:layout_constraintStart_toEndOf="@id/imageArtWork"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageArtWork"
+        android:id="@+id/songTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/gs_bold"
+        android:maxLines="1"
+        android:lines="1"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        tools:text="Silence in Diam"
+        android:textSize="@dimen/am_text_small"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toStartOf="@id/songTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/songTitle"
+        android:id="@+id/songArtist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/gs_regular"
+        android:maxLines="1"
+        android:lines="1"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        tools:text="Kuncoro Qusloiq"
+        android:textSize="@dimen/am_text_tiny"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="@dimen/am_component_tiny"
+        app:layout_constraintStart_toStartOf="@id/songTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/songArtist"
+        android:id="@+id/songAlbum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:fontFamily="@font/gs_bold"
+        android:maxLines="1"
+        android:lines="1"
+        android:layout_gravity="center"
+        android:textColor="@color/gray"
+        tools:text="Tekdung"
+        android:textSize="@dimen/am_text_tiny"/>
+
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/playBadge"
+        app:layout_constraintTop_toTopOf="@id/imageArtWork"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/am_activity_horizontal_margin"
+        android:layout_marginTop="8dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/circle_red"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

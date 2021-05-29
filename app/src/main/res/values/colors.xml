@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blackTotal">#FF000000</color>
+    <color name="black">#101010</color>
+    <color name="blackSmoke">#1C1C1C</color>
+    <color name="white">#F7F7F8</color>
+    <color name="whiteTotal">#FFFFFFFF</color>
+    <color name="whiteSmoke">#D6D6D6</color>
+    <color name="gray">#CECECE</color>
+    <color name="grayDark">#A5A5A5</color>
+    <color name="whiteGray">#B4B4B4</color>
+    <color name="red_500">#F44336</color>
+    <color name="red_700">#F71313</color>
+
+    <color name="colorAmToast">#101010</color>
+    <color name="colorAmPrimary">@color/black</color>
+    <color name="colorAmPrimaryDark">@color/blackTotal</color>
+    <color name="colorAmDivider">#FAFAFA</color>
+    <color name="colorAmDividerBlack">#D0BFBFBF</color>
+
+    <color name="colorAmInputPrimary">#FFFFFF</color>
+    <color name="colorAmInputPrimaryPressed">#F3F3F3</color>
+    <color name="colorAmInputPrimaryDisabled">#CACACA</color>
+
+    <color name="colorAmTextAccent">@color/black</color>
+    <color name="colorAmTextPrimary">#101010</color>
+    <color name="colorAmTextSecondary">#727272</color>
+    <color name="colorAmTextPressed">#000000</color>
+    <color name="colorAmTextDisabled">#C9505050</color>
+    <color name="colorAmError">#db284e</color>
+
+    <color name="splash">#86101010</color>
+
+</resources>

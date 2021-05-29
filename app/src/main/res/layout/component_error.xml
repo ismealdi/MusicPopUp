@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLoader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/whiteSmoke"
+    android:layout_gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/labelInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAmTextDisabled"
+        android:textSize="@dimen/am_text_small"
+        app:fontFamily="@font/gs_regular"
+        android:text="@string/text_something_went_wrong_comma" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toEndOf="@id/labelInfo"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/buttonTryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAmPrimaryDark"
+        android:textSize="@dimen/am_text_small"
+        app:fontFamily="@font/gs_medium"
+        android:text="@string/text_try_again" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

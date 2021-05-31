@@ -17,7 +17,7 @@
    1. *Android Support Repository*
    1. *Google Repository*
 1. Return to Android Studio and select *Open an existing Android Studio project*
-1. Select the **android-basic-samples** directory.
+1. Select the **MusicPopUp** directory.
 
 
 # Design Interfaces
